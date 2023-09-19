@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+  </head>
+  <body>
+    <h1>Равнозамедленное движение</h1>
+    <br>
+    <h3>Начальные данные</h3>
+    <label>Начальная скорость <input id="v0" type="number" value="0" /> м/с</label>
+    <br>
+    <label>Коэффициент трения <input id="coef" type="number" value="0" /></label>
+    <br>
+    <div class="button-container">
+      <button id="start">Рассчитать</button>
+      <button id="reset">Сбросить</button>
+    </div>
+    <p class="answer-container">Предмет передвинется на <span id="answer"></span> м</p>
+    <div class="formula">
+      <button id="toggle-formula" value="0"><u>Показать формулу</u></button>
+      <div class="formula-container">
+        <p>\(F_{тр} = ma \Rightarrow \mu mg = ma \Rightarrow a = \mu g\)</p>
+        <p>\(v = v_{0} - at \Rightarrow t = \frac{v_{0}}{a} = \frac{v_{0}}{\mu g}\)</p>
+        <p>\(S = v_{0} t - \frac{a t^{2}}{2} = v_{0} \frac{v_{0}}{\mu g} - \frac{\mu gv^{2}_{0}}{2\mu^{2} g^{2}} = \frac{v^{2}_{0}}{\mu g} - \frac{v^{2}_{0}}{2\mu g} = \frac{v^{2}_{0}}{2\mu g}\)</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
