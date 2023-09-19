@@ -29,11 +29,11 @@ resetButton.onclick = function() {
 
 toggleButton.onclick = function() {
 	if (toggleButton.getAttribute("value") === "0") {
-		toggleButton.innerHTML = "<u>Скрыть формулу</u>";
+		toggleButton.innerHTML = "<u>Скрыть шаги</u>";
 		toggleButton.setAttribute("value", "1");
 		formula.style.visibility = "visible";
 	} else if (toggleButton.getAttribute("value") === "1") {
-		toggleButton.innerHTML = "<u>Показать формулу</u>";
+		toggleButton.innerHTML = "<u>Показать шаги</u>";
 		formula.style.visibility = "hidden";
 		toggleButton.setAttribute("value", "0");
 	}

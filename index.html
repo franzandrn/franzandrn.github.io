@@ -11,19 +11,22 @@
   </head>
   <body>
     <h1>Равнозамедленное движение</h1>
-    <br>
-    <h3>Начальные данные</h3>
-    <label>Начальная скорость <input id="v0" type="number" value="0" /> м/с</label>
-    <br>
-    <label>Коэффициент трения <input id="coef" type="number" value="0" /></label>
-    <br>
-    <div class="button-container">
-      <button id="start">Рассчитать</button>
-      <button id="reset">Сбросить</button>
+    <div id="calc-div">
+      <h3>Начальные данные</h3>
+      <label>Начальная скорость <input id="v0" type="number" value="0" /> м/с</label>
+      <br>
+      <label>Коэффициент трения <input id="coef" type="number" value="0" /></label>
+      <br>
+      <div class="button-container">
+        <button id="start">Рассчитать</button>
+        <button id="reset">Сбросить</button>
+      </div>
+      <p class="answer-container">Предмет передвинется на <span id="answer"></span> м</p>
     </div>
-    <p class="answer-container">Предмет передвинется на <span id="answer"></span> м</p>
     <div class="formula">
-      <button id="toggle-formula" value="0"><u>Показать формулу</u></button>
+      <h3>Формула</h3>
+      <p>\(S = \frac{v^{2}_{0}}{2\mu g}\)</p>
+      <button id="toggle-formula" value="0"><u>Показать шаги</u></button>
       <div class="formula-container">
         <p>\(F_{тр} = ma \Rightarrow \mu mg = ma \Rightarrow a = \mu g\)</p>
         <p>\(v = v_{0} - at \Rightarrow t = \frac{v_{0}}{a} = \frac{v_{0}}{\mu g}\)</p>
